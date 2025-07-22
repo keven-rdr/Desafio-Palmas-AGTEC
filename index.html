@@ -278,27 +278,36 @@
 
 <section class="stories-section">
     <div class="container">
-        <h2>Stories</h2>
-        <div class="stories-grid">
-            <div class="story-item">
-                <img src="/placeholder.svg?height=80&width=80" alt="Story 1">
-                <p>Nome da Pessoa</p>
-            </div>
-            <div class="story-item">
-                <img src="/placeholder.svg?height=80&width=80" alt="Story 2">
-                <p>Nome da Pessoa</p>
-            </div>
-            <div class="story-item">
-                <img src="/placeholder.svg?height=80&width=80" alt="Story 3">
-                <p>Nome da Pessoa</p>
-            </div>
-            <div class="story-item">
-                <img src="/placeholder.svg?height=80&width=80" alt="Story 4">
-                <p>Nome da Pessoa</p>
-            </div>
-            <div class="story-item">
-                <img src="/placeholder.svg?height=80&width=80" alt="Story 5">
-                <p>Nome da Pessoa</p>
+        <div class="stories-container">
+            <h2>Stories</h2>
+
+            <div class="stories-carousel">
+                <button class="arrow prev"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="stories-grid">
+                    <div class="story-item">
+                        <img src="assets/imagens/centro-de-convencoes.png" alt="Story 1">
+                        <p>Vagas abertas para aprender música no Conservatório de MPB</p>
+                    </div>
+                    <div class="story-item">
+                        <img src="assets/imagens/cuidar-animais.png" alt="Story 2">
+                        <p>Cuidado com os animais do Zoo no frio</p>
+                    </div>
+                    <div class="story-item">
+                        <img src="assets/imagens/mudança-girassois.png" alt="Story 3">
+                        <p>Novas mudanças no Jardim Britânico</p>
+                    </div>
+                    <div class="story-item">
+                        <img src="assets/imagens/agasalho-palmas.png" alt="Story 4">
+                        <p>Campanha do Agasalho</p>
+                    </div>
+                    <div class="story-item">
+                        <img src="assets/imagens/reforma-esportes.png" alt="Story 5">
+                        <p>Reforma no cenário de esportes no São Cercado</p>
+                    </div>
+                </div>
+
+                <button class="arrow next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
     </div>
@@ -306,116 +315,128 @@
 
 <section class="gallery-section">
     <div class="container">
-        <h2>GALERIA DE FOTO</h2>
-        <div class="gallery-grid">
-            <div class="gallery-main">
-                <img src="/placeholder.svg?height=400&width=600" alt="Galeria Principal">
+        <h2 class="section-title-light">GALERIA DE FOTO</h2>
+
+        <div class="gallery-container">
+            <div class="gallery-item main-image">
+                <img src="assets/imagens/galeria-principal.png" alt="Galeria Principal">
                 <div class="gallery-overlay">
-                    <h3>Título da Imagem</h3>
-                    <p>Descrição da imagem da galeria...</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
                 </div>
             </div>
+
             <div class="gallery-thumbnails">
-                <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail 1">
-                <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail 2">
-                <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail 3">
-                <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail 4">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="videos-section">
-    <div class="container">
-        <div class="videos-content">
-            <div class="videos-text">
-                <h2>VÍDEOS</h2>
-                <p>Assista aos vídeos institucionais e conheça mais sobre Palmas.</p>
-            </div>
-            <div class="videos-grid">
-                <div class="video-item">
-                    <img src="/placeholder.svg?height=150&width=200" alt="Vídeo 1">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
+                <div class="gallery-item thumbnail">
+                    <img src="assets/imagens/galeria1.png" alt="Thumbnail 1">
+                    <div class="gallery-overlay">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...</p>
                     </div>
                 </div>
-                <div class="video-item">
-                    <img src="/placeholder.svg?height=150&width=200" alt="Vídeo 2">
-                    <div class="play-button">
-                        <i class="fas fa-play"></i>
+                <div class="gallery-item thumbnail">
+                    <img src="assets/imagens/galeria2.png" alt="Thumbnail 2">
+                    <div class="gallery-overlay">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...</p>
+                    </div>
+                </div>
+                <div class="gallery-item thumbnail">
+                    <img src="assets/imagens/galeria3.png" alt="Thumbnail 3">
+                    <div class="gallery-overlay">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...</p>
+                    </div>
+                </div>
+                <div class="gallery-item thumbnail">
+                    <img src="assets/imagens/galeria4.png" alt="Thumbnail 4">
+                    <div class="gallery-overlay">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
+    <section class="videos-section">
+        <div class="container">
+            <div class="videos-container">
+                <div class="videos-text">
+                    <h2 class="section-title-dark">VÍDEOS</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas.</p>
+                    <div class="social-pill">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="videos-player">
+                    <div class="main-video">
+                        <iframe src="https://youtu.be/5TrjUwIE-nU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-thumbnails">
+                        <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail Vídeo 1">
+                        <img src="/placeholder.svg?height=100&width=150" alt="Thumbnail Vídeo 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</section>
 <footer class="footer">
+    <div class="color-stripe"></div>
+
     <div class="container">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="assets/imagens/logo-palmas.png" alt="Palmas Logo">
-                <p>O QUE VOCÊ PROCURA?</p>
+        <div class="footer-content">
+            <div class="footer-logo-search">
+                <img src="assets/imagens/logo-palmas.png" alt="Logo Prefeitura de Palmas">
+                <div class="footer-search">
+                    <input type="text" placeholder="O QUE VOCÊ PROCURA?">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
             </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-links">
-            <div class="footer-column">
-                <h4>MENU</h4>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">A Cidade</a></li>
-                    <li><a href="#">Governo</a></li>
-                    <li><a href="#">Transparência</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>HISTÓRICO</h4>
-                <ul>
-                    <li><a href="#">Nossa História</a></li>
-                    <li><a href="#">Marcos Históricos</a></li>
-                    <li><a href="#">Evolução</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>SERVIÇOS</h4>
-                <ul>
-                    <li><a href="#">Cidadão</a></li>
-                    <li><a href="#">Empresa</a></li>
-                    <li><a href="#">Servidor</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>OUTROS</h4>
-                <ul>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Ouvidoria</a></li>
-                    <li><a href="#">Notícias</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>ESTRUTURA</h4>
-                <ul>
-                    <li><a href="#">Secretarias</a></li>
-                    <li><a href="#">Órgãos</a></li>
-                    <li><a href="#">Autarquias</a></li>
-                </ul>
-            </div>
-            <div class="footer-logo-section">
-                <img src="assets/imagens/palmas-seal.png" alt="Brasão Palmas">
+            <nav class="footer-nav">
+                <div class="footer-column">
+                    <h4>MENU</h4>
+                    <ul>
+                        <li><a href="#">OUVIDORIA</a></li>
+                        <li><a href="#">PORTAL DA TRANSPARÊNCIA</a></li>
+                        <li><a href="#">CONTATO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>NOTÍCIAS</h4>
+                    <ul>
+                        <li><a href="#">MAIS NOTÍCIAS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>SERVIÇOS</h4>
+                    <ul>
+                        <li><a href="#">CIDADÃO</a></li>
+                        <li><a href="#">EMPRESA</a></li>
+                        <li><a href="#">SERVIDOR</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>FOTOS</h4>
+                    <ul>
+                        <li><a href="#">VÍDEOS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTATOS</h4>
+                    <ul>
+                        <li><a href="#">PHASELLUS</a></li>
+                        <li><a href="#">TEMPOR</a></li>
+                        <li><a href="#">FELIS EU</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-seal">
+                <img src="assets/imagens/logo-municipo-palmas.png" alt="Brasão de Palmas">
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>ACESSO À INFORMAÇÃO | CARTA DE SERVIÇOS AO USUÁRIO | OUVIDORIA</p>
-            <p>Rua das Acácias, Quadra 103 Norte, Avenida JK, 515, Plano Diretor Norte, Palmas - TO, 77001-140</p>
+        <div class="footer-bottom-bar">
+            <p>MORBI ALIQUAM ERAT IN SUSCIPIT. SED ACCUMSAN TURPIS SIT AMET LEO COMMODO, NEC MATTIS JUSTO SODALES.</p>
         </div>
     </div>
 </footer>
