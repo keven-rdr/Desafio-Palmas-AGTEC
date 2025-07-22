@@ -21,69 +21,117 @@ body {
 .header {
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 .header-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    padding: 5px 0;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
-.header-actions {
+.search-social-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    margin: 0 auto;
 }
 
-.accessibility-tools {
+.header-search {
     display: flex;
-    gap: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 450px;
 }
 
-.btn-accessibility {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
+.header-search input {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.header-search input:focus {
+    outline: none;
+}
+
+.header-search button {
+    background: transparent;
+    border: none;
+    padding: 0 15px;
     cursor: pointer;
-    border-radius: 3px;
-    font-size: 12px;
+    color: #666;
+    font-size: 16px;
 }
 
+/* Ícones Sociais */
 .social-links {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
 }
 
 .social-links a {
-    color: #666;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #004b87;
+    border-radius: 50%;
     text-decoration: none;
+    transition: opacity 0.2s;
 }
 
+.social-links a i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Efeito ao passar o mouse */
 .social-links a:hover {
-    color: #1e4d8b;
+    opacity: 0.85;
+}
+
+/* Estilo para o primeiro ícone ser amarelo, como na imagem */
+.social-links a:first-child {
+    background-color: #fecd0a; /* Cor amarela */
+}
+
+/* Novo estilo para a faixa colorida */
+.color-stripe {
+    height: 4px;
+    background: linear-gradient(to right, #00944d 33.3%, #fecd0a 33.3%, #fecd0a 66.6%, #004b87 66.6%);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.main-nav .fa-bars {
+    font-size: 24px;
+    color: #004b87;
+    margin-right: 20px;
 }
 
 .main-nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
-    padding: 15px 0;
 }
 
 .main-nav a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 600; /* Mais forte que o anterior */
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -91,6 +139,25 @@ body {
 
 .main-nav a:hover {
     color: #1e4d8b;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0; /* Adiciona um pouco de espaço para a borda */
+    border-bottom: 4px solid transparent; /* Borda invisível para manter o alinhamento */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #004b87; /* Cor do texto fica azul */
+    border-bottom-color: #004b87; /* A borda/sublinhado aparece */
 }
 
 /* Hero Section */
@@ -110,7 +177,7 @@ body {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0;
 }
 
 .hero-text h1 {
@@ -123,6 +190,53 @@ body {
     margin-bottom: 30px;
     color: #666;
     line-height: 1.8;
+}
+
+/* Novos estilos para o footer do Hero Section */
+.hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.read-more {
+    color: #1e4d8b;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-pill {
+    background-color: #1e4d8b;
+    border-radius: 20px;
+    padding: 6px 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.social-pill a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.social-pill a:hover {
+    opacity: 0.8;
+}
+
+.share-icon i {
+    font-size: 18px;
+    color: #1e4d8b;
 }
 
 .btn-primary {
@@ -155,7 +269,7 @@ body {
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-bottom: 30px;
 }
@@ -233,7 +347,7 @@ body {
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
@@ -266,10 +380,73 @@ body {
     text-transform: uppercase;
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.news-section h2, .info-cards h3 {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.btn-more-news {
+    background-color: #1e4d8b;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+.btn-more-news:hover {
+    background-color: #163a6f;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.card-read-more {
+    text-decoration: none;
+    color: #1e4d8b;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.card-share-icon {
+    text-decoration: none;
+    color: #888;
+    font-size: 16px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.info-card-body {
+    flex-grow: 1;
+}
+
 /* Banner Section */
 .banner-section {
     background: #ffc107;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .banners {
@@ -280,97 +457,147 @@ body {
 }
 
 .banner-item img {
-    height: 120px;
-    border-radius: 8px;
+    height: 200px;
+    border-radius: 0px;
 }
 
 /* Services Section */
 .services-section {
-    background: #1e4d8b;
-    padding: 60px 0;
+    background-color: #1e4d8b;
+    padding: 40px 0 120px 0;
+    position: relative;
     color: white;
 }
+.services-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+    mask-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,170.7C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
 
-.search-bar {
+.services-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Barra de busca superior */
+.top-search-bar {
     display: flex;
-    gap: 10px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.search-bar input,
-.search-bar select {
-    padding: 12px;
-    border: none;
+    align-items: center;
+    background-color: white;
     border-radius: 5px;
-    flex: 1;
-    min-width: 150px;
+    padding: 5px;
+    margin-bottom: 30px;
 }
-
-.btn-search {
-    background: #ffc107;
+.search-input-container {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search-input-container input {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    padding-left: 40px; /* Espaço para a lupa na esquerda */
+    font-size: 14px;
+}
+.search-input-container input:focus {
+    outline: none;
+}
+.search-icon {
+    position: absolute;
+    left: 15px; /* Lupa posicionada na esquerda */
+    color: #888;
+}
+.top-search-nav a {
+    text-decoration: none;
+    color: #666;
+    margin: 0 15px;
+    font-weight: bold; /* Texto em negrito */
+}
+.btn-buscar {
+    background-color: #ffc107;
     color: #333;
     border: none;
-    padding: 12px 30px;
     border-radius: 5px;
+    padding: 10px 25px;
+    font-weight: bold; /* Texto em negrito */
     cursor: pointer;
-    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.service-categories {
+/* Abas alinhadas à esquerda */
+.service-tabs {
     display: flex;
+    justify-content: flex-start; /* Alinha as abas à esquerda */
     gap: 40px;
-    margin-bottom: 30px;
-    justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tab-item {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+    border-bottom: 4px solid transparent;
+    transition: all 0.2s;
+}
+.tab-item.active {
+    opacity: 1;
+    border-bottom-color: white;
 }
 
-.service-categories h3 {
-    font-size: 1.5rem;
-    border-bottom: 2px solid #ffc107;
-    padding-bottom: 5px;
-}
-
+/* Grade de Serviços e Itens */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    margin-bottom: 40px;
 }
-
 .service-item {
-    background: white;
+    background-color: white;
     color: #333;
-    padding: 30px 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .service-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-.service-icon {
-    font-size: 2.5rem;
-    color: #1e4d8b;
+.service-item img {
+    height: 40px;
     margin-bottom: 15px;
 }
-
 .service-item h4 {
+    color: #1e4d8b;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
-.btn-view-all {
-    background: #ffc107;
+/* Botão "saiba mais" */
+.section-footer {
+    text-align: right;
+    margin-top: 30px;
+}
+.btn-saiba-mais {
+    background-color: #ffc107;
     color: #333;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 8px 25px;
+    border-radius: 20px;
+    text-decoration: none;
     font-weight: bold;
-    display: block;
-    margin: 0 auto;
+    font-size: 14px;
 }
 
 /* Stories Section */
@@ -538,7 +765,7 @@ body {
 }
 
 .footer-logo img {
-    height: 40px;
+    height: 90px;
     margin-bottom: 10px;
 }
 

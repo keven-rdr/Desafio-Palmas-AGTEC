@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palmas - Portal da Transparência</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,27 +13,32 @@
     <div class="container">
         <div class="header-top">
             <div class="logo">
-                <img src="assets/images/logo-palmas.png" alt="Palmas Logo">
+                <img src="assets/imagens/logo-palmas.png" alt="Palmas Logo">
             </div>
-            <div class="header-actions">
-                <div class="accessibility-tools">
-                    <button class="btn-accessibility">A-</button>
-                    <button class="btn-accessibility">A</button>
-                    <button class="btn-accessibility">A+</button>
-                    <button class="btn-accessibility"><i class="fas fa-adjust"></i></button>
+
+            <div class="search-social-container">
+                <div class="header-search">
+                    <input type="text" placeholder="O QUE VOCÊ PROCURA?">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
+
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="color-stripe"></div>
+
+    <div class="container">
         <nav class="main-nav">
+            <i class="fas fa-bars"></i>
             <ul>
-                <li><a href="#"><i class="fas fa-home"></i> OUVIDORIA</a></li>
+                <li><a href="#" class="active">OUVIDORIA</a></li>
                 <li><a href="#">PORTAL DA TRANSPARÊNCIA</a></li>
                 <li><a href="#">CONTATO</a></li>
             </ul>
@@ -46,12 +51,26 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-image">
-                <img src="/placeholder.svg?height=300&width=500" alt="Infraestrutura de Palmas">
+                <img src="assets/imagens/infra-palmas.png" alt="Infraestrutura de Palmas">
             </div>
             <div class="hero-text">
                 <h1>CUIABÁ-MT ET METUS LOREM</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                <button class="btn-primary">LEIA MAIS</button>
+
+                <div class="hero-footer">
+                    <a href="#" class="read-more">LER MAIS...</a>
+                    <div class="hero-actions">
+                        <div class="social-pill">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <a href="#" class="share-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -60,38 +79,61 @@
 <!-- News Section -->
 <section class="news-section">
     <div class="container">
-        <h2>ÚLTIMAS NOTÍCIAS</h2>
+        <div class="section-header">
+            <h2>ÚLTIMAS NOTÍCIAS</h2>
+            <a href="#" class="btn-more-news">MAIS NOTÍCIAS</a>
+        </div>
         <div class="news-grid">
             <article class="news-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Notícia 1">
+                <img src="assets/imagens/predio-pref-palmas.png" alt="Notícia 1">
                 <div class="news-content">
                     <h3>CUIABÁ-MT ET METUS LOREM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <span class="news-date">15 JAN</span>
+                    <div class="card-footer">
+                        <a href="#" class="card-read-more">LER MAIS...</a>
+                        <a href="#" class="card-share-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
             <article class="news-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Notícia 2">
+                <img src="assets/imagens/posse-pref-palmas.png" alt="Notícia 2">
                 <div class="news-content">
                     <h3>CUIABÁ-MT ET METUS LOREM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <span class="news-date">14 JAN</span>
+                    <div class="card-footer">
+                        <a href="#" class="card-read-more">LER MAIS...</a>
+                        <a href="#" class="card-share-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
             <article class="news-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Notícia 3">
+                <img src="assets/imagens/volei-palmas.png" alt="Notícia 3">
                 <div class="news-content">
                     <h3>CUIABÁ-MT ET METUS LOREM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <span class="news-date">13 JAN</span>
+                    <div class="card-footer">
+                        <a href="#" class="card-read-more">LER MAIS...</a>
+                        <a href="#" class="card-share-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
             <article class="news-card">
-                <img src="/placeholder.svg?height=200&width=300" alt="Notícia 4">
+                <img src="assets/imagens/discurso-pref-palmas.png" alt="Notícia 4">
                 <div class="news-content">
                     <h3>CUIABÁ-MT ET METUS LOREM</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <span class="news-date">12 JAN</span>
+                    <div class="card-footer">
+                        <a href="#" class="card-read-more">LER MAIS...</a>
+                        <a href="#" class="card-share-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
         </div>
@@ -107,22 +149,45 @@
     <div class="container">
         <div class="cards-grid">
             <div class="info-card">
-                <h3>HISTÓRIA</h3>
-                <p>Conheça a história de Palmas e sua evolução ao longo dos anos.</p>
+                <div class="info-card-body">
+                    <h3>HISTÓRIA</h3>
+                    <p>Conheça a história de Palmas e sua evolução ao longo dos anos.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-read-more">LER MAIS...</a>
+                </div>
             </div>
             <div class="info-card">
+                <div class="info-card-body">
                 <h3>SERVIÇOS AO CIDADÃO</h3>
+                </div>
                 <p>Acesse os principais serviços oferecidos pela prefeitura.</p>
+                <div class="card-footer">
+                    <a href="#" class="card-read-more">LER MAIS...</a>
+                </div>
             </div>
             <div class="info-card">
+                <div class="info-card-body">
                 <h3>TRANSPARÊNCIA</h3>
                 <p>Portal da transparência com informações públicas.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-read-more">LER MAIS...</a>
+                </div>
             </div>
             <div class="info-card">
+                <div class="info-card-body">
                 <h3>LEGISLAÇÃO</h3>
                 <p>Consulte as leis e decretos municipais vigentes.</p>
-                <button class="btn-secondary">ACESSE AQUI</button>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="card-read-more">LER MAIS...</a>
+                </div>
             </div>
+        </div>
+        <div class="section-header">
+            <h3></h3>
+            <a href="#" class="btn-more-news">MAIS NOTÍCIAS</a>
         </div>
     </div>
 </section>
@@ -132,13 +197,13 @@
     <div class="container">
         <div class="banners">
             <div class="banner-item">
-                <img src="/placeholder.svg?height=150&width=200" alt="Banner 1">
+                <img src="assets/imagens/taca-campeonato.png" alt="Banner 1">
             </div>
             <div class="banner-item">
-                <img src="/placeholder.svg?height=150&width=200" alt="Banner 2">
+                <img src="assets/imagens/compir-evento.png" alt="Banner 2">
             </div>
             <div class="banner-item">
-                <img src="/placeholder.svg?height=150&width=200" alt="Banner 3">
+                <img src="assets/imagens/rota-do-chocolate.png" alt="Banner 3">
             </div>
         </div>
     </div>
@@ -147,77 +212,67 @@
 
 <section class="services-section">
     <div class="container">
-        <div class="search-bar">
-            <input type="text" placeholder="O QUE VOCÊ PROCURA?">
-            <select>
-                <option>SERVIÇOS</option>
-            </select>
-            <select>
-                <option>TRANSPARÊNCIA</option>
-            </select>
-            <select>
-                <option>GOVERNO</option>
-            </select>
-            <button class="btn-search">BUSCAR</button>
+        <div class="top-search-bar">
+            <div class="search-input-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="O QUE VOCÊ PROCURA?">
+            </div>
+            <nav class="top-search-nav">
+                <a href="#">SERVIÇOS</a>
+                <a href="#">TRANSPARÊNCIA</a>
+                <a href="#">GOVERNO</a>
+            </nav>
+            <button class="btn-buscar">BUSCAR</button>
         </div>
 
-        <div class="service-categories">
-            <h3>CIDADÃO</h3>
-            <h3>EMPRESA</h3>
-            <h3>SERVIDOR</h3>
+        <nav class="service-tabs">
+            <a href="#cidadao" class="tab-item active">CIDADÃO</a>
+            <a href="#empresa" class="tab-item">EMPRESA</a>
+            <a href="#servidor" class="tab-item">SERVIDOR</a>
+        </nav>
+
+        <div class="tab-content">
+            <div id="cidadao" class="tab-panel active">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>NOTA FISCAL ELETRÔNICA</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>DIÁRIO OFICIAL</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>ALVARÁS</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>CONSULTA CCI</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>EMISSÃO DE IPTU</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>PORTAL DO CONTRIBUINTE</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <h4>RESOLVE PALMAS</h4>
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                    </div>
+                    <div class="service-item">
+                        <img src="assets/imagens/logo-municipo-palmas-vetor.png" alt="Ícone">
+                        <h4>CND - CERTIDÃO NEGATIVA</h4>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="services-grid">
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <h4>NOTA FISCAL ELETRÔNICA</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                <h4>CIDADÃO PALMENSE</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <h4>ALVARÁ</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <h4>CONSULTA TELEFÔNICA</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-building"></i>
-                </div>
-                <h4>EMPREGO FÁCIL</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h4>PORTAL DO CONTRIBUINTE</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-map"></i>
-                </div>
-                <h4>GEOPALMAS</h4>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">
-                    <i class="fas fa-certificate"></i>
-                </div>
-                <h4>CNPJ - CERTIDÃO NEGATIVA</h4>
-            </div>
+        <div class="section-footer">
+            <a href="#" class="btn-saiba-mais">saiba mais</a>
         </div>
-        <button class="btn-view-all">VER TODOS</button>
     </div>
 </section>
 
@@ -299,7 +354,7 @@
     <div class="container">
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="assets/images/palmas-logo.png" alt="Palmas Logo">
+                <img src="assets/imagens/logo-palmas.png" alt="Palmas Logo">
                 <p>O QUE VOCÊ PROCURA?</p>
             </div>
             <div class="footer-social">
@@ -354,7 +409,7 @@
                 </ul>
             </div>
             <div class="footer-logo-section">
-                <img src="assets/images/palmas-seal.png" alt="Brasão Palmas">
+                <img src="assets/imagens/palmas-seal.png" alt="Brasão Palmas">
             </div>
         </div>
 
