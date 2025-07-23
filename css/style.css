@@ -464,7 +464,7 @@ body {
 /* Services Section */
 .services-section {
     background-color: #1e4d8b;
-    padding: 40px 0;
+    padding: 90px 0;
     position: relative;
     color: white;
     overflow: hidden;
@@ -476,7 +476,7 @@ body {
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 285px;
+    height: 342px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,224L48,197.3C96,171,192,117,288,101.3C384,85,480,107,576,133.3C672,160,768,192,864,186.7C960,181,1056,139,1152,138.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -682,7 +682,6 @@ body {
 /* Gallery Section */
 .gallery-section {
     background: #00944d;
-    padding: -100px;
     border-bottom-left-radius: 50% 80px;
     border-bottom-right-radius: 50% 80px;
     position: relative;
@@ -865,77 +864,188 @@ body {
     }
 }
 
-/* NOVO FOOTER */
+/* ESTILOS GERAIS DO FOOTER */
 .footer {
-    background-color: white; /* Fundo branco */
+    background-color: white;
     color: #333;
-    padding: 40px 0 0;
+    padding-top: 40px;
 }
-/* A faixa colorida é a mesma usada no header */
+
 .footer .color-stripe {
     height: 4px;
     background: linear-gradient(to right, #00944d 33.3%, #fecd0a 33.3%, #fecd0a 66.6%, #004b87 66.6%);
     margin-bottom: 40px;
 }
+
+/* ALINHAMENTO DO CONTEÚDO PRINCIPAL (LOGO, LINKS, BRASÃO) */
 .footer-content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
     margin-bottom: 40px;
 }
+
+/* COLUNA DA ESQUERDA: LOGO E BUSCA */
+.footer-logo-search {
+    flex-shrink: 0;
+}
+
 .footer-logo-search img {
     height: 45px;
     margin-bottom: 20px;
 }
+
 .footer-search {
     display: flex;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .footer-search input {
     border: none;
     padding: 10px;
     width: 100%;
 }
+
 .footer-search button {
     background: transparent;
     border: none;
     padding: 0 15px;
+    cursor: pointer;
 }
+
+/* CENTRO: COLUNAS DE LINKS DE NAVEGAÇÃO */
 .footer-nav {
     display: flex;
     gap: 50px;
     flex-grow: 1;
+    justify-content: center;
 }
+
 .footer-column h4 {
     color: #1e4d8b;
     margin-bottom: 15px;
     text-transform: uppercase;
     font-size: 0.9rem;
 }
+
 .footer-column ul {
     list-style: none;
+    padding: 0;
 }
+
 .footer-column ul li a {
     text-decoration: none;
     color: #333;
     font-size: 0.9rem;
     line-height: 1.8;
 }
+
+/* COLUNA DA DIREITA: BRASÃO */
+.footer-seal {
+    flex-shrink: 0;
+    margin-top: 52px;
+}
+
 .footer-seal img {
     height: 80px;
 }
+
+/* BARRA AZUL INFERIOR CENTRALIZADA */
 .footer-bottom-bar {
     background-color: #1e4d8b;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin: 0 -100%; /* Faz a barra ocupar a largura toda */
+    padding: 15px 0;
     width: 100vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* Session Footer */
+
+/* Container principal da nova seção */
+.header-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+/* Container para a busca e ícones sociais no footer */
+.search-social-container-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Barra de busca específica do footer */
+.header-search-footer {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 450px;
+}
+
+.header-search-footer input {
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.header-search-footer input:focus {
+    outline: none;
+}
+
+.header-search-footer button {
+    background: transparent;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Ícones sociais específicos do footer */
+.social-links-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #004b87;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.social-links-footer a i {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.social-links-footer a:hover {
+    opacity: 0.85;
+}
+
+.social-links-footer a:first-child {
+    background-color: #fecd0a;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
