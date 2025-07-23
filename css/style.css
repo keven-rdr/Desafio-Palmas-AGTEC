@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -92,12 +91,10 @@ body {
     font-size: 16px;
 }
 
-/* Efeito ao passar o mouse */
 .social-links a:hover {
     opacity: 0.85;
 }
 
-/* Estilo para o primeiro ícone ser amarelo, como na imagem */
 .social-links a:first-child {
     background-color: #fecd0a; /* Cor amarela */
 }
@@ -464,9 +461,10 @@ body {
 /* Services Section */
 .services-section {
     background-color: #1e4d8b;
-    padding: 90px 0;
+    padding: 10px 0 1px 0;
     position: relative;
     color: white;
+    overflow: hidden;
 }
 
 .services-section::after {
@@ -477,8 +475,9 @@ body {
     left: 0;
     height: 30vh;
     max-height: 250px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' d='M0,224C80,192,160,160,240,149.3C320,139,400,149,480,160C560,171,640,181,720,165.3C800,149,880,107,960,101.3C1040,96,1120,128,1200,149.3C1280,171,1360,181,1400,186.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'/%3E%3C/svg%3E");
-    background-size: cover;
+    min-height: 150px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,224C80,192,160,160,240,149.3C320,139,400,149,480,160C560,171,640,181,720,165.3C800,149,880,107,960,101.3C1040,96,1120,128,1200,149.3C1280,171,1360,181,1400,186.7L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: 1;
@@ -570,22 +569,35 @@ body {
     color: #333;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    gap: 15px;
 }
+
 .service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 .service-item img {
-    height: 40px;
-    margin-bottom: 15px;
+    height: 95px;
+    width: 95px;
+    margin-bottom: 25px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 .service-item h4 {
     color: #1e4d8b;
     font-size: 0.9rem;
     font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+    margin-bottom: 15px;
 }
 
 /* Botão "saiba mais" */
@@ -693,7 +705,7 @@ body {
 }
 
 .gallery-section .section-title-light {
-    text-align: center;
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 40px;
@@ -721,20 +733,7 @@ body {
     object-fit: cover;
 }
 
-.gallery-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    color: white;
-    padding: 20px;
-}
 
-.gallery-overlay p {
-    margin: 0;
-    font-size: 0.9rem;
-}
 
 .gallery-thumbnails {
     display: grid;
@@ -772,11 +771,7 @@ body {
     margin: 0 auto;
     color: #333;
     position: relative;
-
-    /* Z-INDEX MAIOR: para ficar NA FRENTE */
     z-index: 2;
-
-    /* Margem negativa para PUXAR PARA CIMA */
     margin-top: -120px;
 }
 
@@ -800,7 +795,7 @@ body {
 }
 
 .videos-text .social-pill {
-    background-color: #333;
+    background-color: #433924;
     border-radius: 20px;
     padding: 8px 15px;
     display: inline-flex;
@@ -835,7 +830,8 @@ body {
 
 .video-thumbnails img {
     width: 100%;
-    height: auto;
+    height: 120px;
+    object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -843,7 +839,21 @@ body {
 }
 
 .video-thumbnails img:hover {
-    border-color: #333;
+    border-color: #433924;
+}
+
+.video-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.video-share-icon {
+    font-size: 22px;
+    color: #433924;
+    text-decoration: none;
 }
 
 /* Ajustes Responsivos */
@@ -956,11 +966,11 @@ body {
 /* COLUNA DA DIREITA: BRASÃO */
 .footer-seal {
     flex-shrink: 0;
-    margin-top: 52px;
 }
 
 .footer-seal img {
-    height: 80px;
+    height: 150px;
+
 }
 
 /* BARRA AZUL INFERIOR CENTRALIZADA */
@@ -974,8 +984,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-
-/* Session Footer */
 
 /* Container principal da nova seção */
 .header-footer {
